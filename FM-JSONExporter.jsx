@@ -12,7 +12,7 @@
 
 
 var scriptName = "FM JSONExporter"
-var scriptVersion = "1.0.2"
+var scriptVersion = "1.0.3"
 var comp = app.project.activeItem
 var keyCount = comp.markerProperty.numKeys
 var today = new Date()
@@ -45,11 +45,11 @@ var json = {
 }
 
 function showDialog() {
-	var w = new Window("palette", scriptName + " v" + scriptVersion, [0, 0, 200, 50],{resizeable:true});
+	var w = new Window("window", scriptName + " v" + scriptVersion, [0, 0, 200, 50],{resizeable:true});
 	var exportBtn = w.add("button",[20,10,180,40],"Export")
-	setArray()
 	w.center()
-	exportBtn.onClick = function() { fileSave() }
+	var array = setArray()
+	exportBtn.onClick = function() { fileSave(array) }
 	return w
 }
 
@@ -66,9 +66,10 @@ function setArray() {
 		}
 		json.keyFrames[i] = obj
 	}
+	return json
 }
 
-function fileSave() {
+function fileSave(json) {
 	var fileName = json.compName + ".json"
 	var fileObject = new File(fileName)
 	var outputObject = fileObject.saveDlg("Save the json file.", "*.json")
