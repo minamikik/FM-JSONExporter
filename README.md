@@ -2,7 +2,7 @@
 for Adobe After Effects 2020 (17.1.0)
 
 ## Description
-Export After Effects marker time to JSON format.
+Export After Effects marker times to JSON format.
 
 ## Instalation
 ### Windows
