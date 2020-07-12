@@ -3,6 +3,9 @@
 	for Adobe After Effects 2020 (17.1.0)
 	https://www.sync.dev / info@sync.dev
 
+	Description:
+		Export After Effects marker time to JSON format.
+
 	Instalation:
 		Windows
 			Copy to C:/Program Files/Adobe/Adobe After Effects {version}/Support Files/Scripts/ScriptUI Panels
