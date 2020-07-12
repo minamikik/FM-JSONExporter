@@ -1,25 +1,37 @@
 /*
-	FM JSONExporter 1.0.7
-	for Adobe After Effects 2020 (17.1.0)
-	https://github.com/minamikik/FM-JSONExporter
+	# FM-JSONExporter
+		for Adobe After Effects 2020 (17.1.0)
 
-	Description:
+	## Description
 		Export After Effects marker time to JSON format.
 
-	Instalation:
-		Windows
-			Copy to C:/Program Files/Adobe/Adobe After Effects {version}/Support Files/Scripts/ScriptUI Panels
-		Mac
-			Copy to /Applications/Adobe After Effects {version}/Scripts/ScriptUI Panels
+	## Instalation
+	### Windows
+		Copy to C:/Program Files/Adobe/Adobe After Effects {version}/Support Files/Scripts/ScriptUI Panels
+	### Mac
+		Copy to /Applications/Adobe After Effects {version}/Scripts/ScriptUI Panels
 
-	Usage:
+	## Usage
 		1. After Effects > Window > FM-JSONExporter.jsx
 		2. Select target composition.
 		3. Push Export button.
 
-	License:
-		MIT © sync.dev minamikik
-		https://www.sync.dev
+	## Change log
+	### 1.0.7
+		+ Decoded non-Latin characters. 
+		+ Changed the way the Window is displayed in the center.
+
+	### 1.0.6
+		+ Unnecessary processing has been removed.
+		+ Added a description of the license.
+
+	### 1.0.5
+		+ Reimplemented the whole thing.
+		+ Changed to work within Script UI Panels.
+
+	## License
+		MIT © sync.dev / minamikik / https://www.sync.dev
+
 */
 
 function fmJsonExporter(thisObj) {

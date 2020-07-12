@@ -1,4 +1,4 @@
-# FM-JSONExporter 1.0.7
+# FM-JSONExporter
 for Adobe After Effects 2020 (17.1.0)
 
 ## Description
@@ -14,6 +14,21 @@ Copy to /Applications/Adobe After Effects {version}/Scripts/ScriptUI Panels
 1. After Effects > Window > FM-JSONExporter.jsx
 2. Select target composition.
 3. Push Export button.
+
+## Change log
+### 1.0.7
++ Decoded non-Latin characters. 
++ Changed the way the Window is displayed in the center.
+
+### 1.0.6
++ Unnecessary processing has been removed.
++ Added a description of the license.
+
+### 1.0.5
++ Reimplemented the whole thing.
++ Changed to work within Script UI Panels.
+
+
 
 ## License
 [MIT](LICENSE) © sync.dev / minamikik / https://www.sync.dev
