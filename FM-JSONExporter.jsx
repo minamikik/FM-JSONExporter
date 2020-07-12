@@ -12,9 +12,10 @@
 		Copy to /Applications/Adobe After Effects {version}/Scripts/ScriptUI Panels
 
 	## Usage
-		1. After Effects > Window > FM-JSONExporter.jsx
-		2. Select target composition.
-		3. Push Export button.
+		1. Check After Effects > Edit > Prefarence > Scripting & Expressions > Allow Scripts to Write Files and Access Network
+		2. Exec After Effects > Window > FM-JSONExporter.jsx
+		3. Select target composition.
+		4. Push Export button.
 
 	## Change log
 	### 1.0.7
