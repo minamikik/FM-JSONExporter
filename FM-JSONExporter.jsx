@@ -1,7 +1,7 @@
 /*
-	FM JSONExporter
+	FM JSONExporter 1.0.6
 	for Adobe After Effects 2020 (17.1.0)
-	https://www.sync.dev / info@sync.dev
+	https://github.com/minamikik/FM-JSONExporter
 
 	Description:
 		Export After Effects marker time to JSON format.
@@ -16,13 +16,16 @@
 		1. After Effects > Window > FM-JSONExporter.jsx
 		2. Select target composition.
 		3. Push Export button.
+
+	License:
+		MIT © sync.dev minamikik
+		https://www.sync.dev
 */
 
 function fmJsonExporter(thisObj) {
 
 	var scriptName = "FM JSONExporter"
-	var scriptVersion = "1.0.5"
-	var isWin = (File.fs == "Windows");
+	var scriptVersion = "1.0.6"
 	
 	// Show the Panel
 	var w = buildUI(thisObj);
@@ -34,7 +37,7 @@ function fmJsonExporter(thisObj) {
 
 	// Build UI Pamel
 	function buildUI(thisObj) {
-		var windowTitle = scriptName + " v" + scriptVersion
+		var windowTitle = scriptName + " " + scriptVersion
 		var firstButton = "Export"
 		var win = (thisObj instanceof Panel)? thisObj : new Window('palette', windowTitle, undefined, {resizeable:true})
 		var myButtonGroup = win.add ("group")
