@@ -1,5 +1,5 @@
 /*
-	FM JSONExporter 1.0.6
+	FM JSONExporter 1.0.7
 	for Adobe After Effects 2020 (17.1.0)
 	https://github.com/minamikik/FM-JSONExporter
 
@@ -25,13 +25,14 @@
 function fmJsonExporter(thisObj) {
 
 	var scriptName = "FM JSONExporter"
-	var scriptVersion = "1.0.6"
+	var scriptVersion = "1.0.7"
 	
 	// Show the Panel
 	var w = buildUI(thisObj);
 	if (w.toString() == "[object Panel]") {
 		w;
 	} else {
+		w.center()
 		w.show();
 	}
 
@@ -52,7 +53,6 @@ function fmJsonExporter(thisObj) {
 			exportJson(win);
 		}
 		win.message = myButtonGroup.add("statictext", [10,10,240,60], "Select target composition and push Export.    ",{multiline:true})
-		win.center()
 		win.layout.layout(true);
 
 		return win
@@ -88,7 +88,7 @@ function fmJsonExporter(thisObj) {
 		var startTimecode = timeToCurrentFormat(startTime, theComp.frameRate)
 		var trt = timeToCurrentFormat(theComp.duration, theComp.frameRate)
 		if (app.project.file) {
-			var projectFileName = app.project.file.name
+			var projectFileName = File.decode(app.project.file.name)
 		} else {
 			var projectFileName = "The file has not been saved yet."
 		}
@@ -132,11 +132,11 @@ function fmJsonExporter(thisObj) {
 	// Save File
 	function saveFile(json) {
 		if (app.project.file) {
-			var filePath = app.project.file.fsName
+			var filePath = File.decode(app.project.file.path) + "/"
 		} else {
 			var filePath = "~/"
 		}
-		var fileName = filePath + json.compName + ".json"
+		var fileName = filePath + json.composition.name + ".json"
 		var fileObject = new File(fileName)
 		var outputObject = fileObject.saveDlg("Save the json file.", "*.json")
 		var text = JSON.stringify(json, null , "\t")

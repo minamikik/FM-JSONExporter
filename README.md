@@ -1,4 +1,4 @@
-# FM-JSONExporter
+# FM-JSONExporter 1.0.7
 for Adobe After Effects 2020 (17.1.0)
 
 ## Description
