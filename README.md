@@ -17,5 +17,4 @@ Copy to /Applications/Adobe After Effects {version}/Scripts/ScriptUI Panels
 3. Push Export button.
 
 ## License
-[MIT](LICENSE) © sync.dev minamikik
-https://www.sync.dev
+[MIT](LICENSE) © sync.dev / minamikik / https://www.sync.dev
