@@ -41,12 +41,12 @@ function fmJsonExporter(thisObj) {
 	var scriptVersion = "1.0.7"
 	
 	// Show the Panel
-	var w = buildUI(thisObj);
+	var w = buildUI(thisObj)
 	if (w.toString() == "[object Panel]") {
-		w;
+		w
 	} else {
 		w.center()
-		w.show();
+		w.show()
 	}
 
 	// Build UI Pamel
@@ -55,18 +55,18 @@ function fmJsonExporter(thisObj) {
 		var firstButton = "Export"
 		var win = (thisObj instanceof Panel)? thisObj : new Window('palette', windowTitle, undefined, {resizeable:true})
 		var myButtonGroup = win.add ("group")
-			myButtonGroup.spacing = 10;
-			myButtonGroup.margins = 0;
-			myButtonGroup.orientation = "column";
-			win.exportBtn = myButtonGroup.add ("button", undefined, firstButton);
-			myButtonGroup.alignment = "center";
-			myButtonGroup.alignChildren = "left";
+			myButtonGroup.spacing = 10
+			myButtonGroup.margins = 0
+			myButtonGroup.orientation = "column"
+			win.exportBtn = myButtonGroup.add ("button", undefined, firstButton)
+			myButtonGroup.alignment = "center"
+			myButtonGroup.alignChildren = "left"
 
 		win.exportBtn.onClick = function(){
-			exportJson(win);
+			exportJson(win)
 		}
 		win.message = myButtonGroup.add("statictext", [10,10,240,60], "Select target composition and push Export.    ",{multiline:true})
-		win.layout.layout(true);
+		win.layout.layout(true)
 
 		return win
 	}
