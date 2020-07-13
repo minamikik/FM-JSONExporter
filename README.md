@@ -17,14 +17,14 @@ Copy to /Applications/Adobe After Effects {version}/Scripts/ScriptUI Panels
 3. Push Export button.
 
 ## Change log
+### 1.0.8
++ Correction of minor errors.
 ### 1.0.7
 + Decoded non-Latin characters. 
 + Changed the way the Window is displayed in the center.
-
 ### 1.0.6
 + Unnecessary processing has been removed.
 + Added a description of the license.
-
 ### 1.0.5
 + Reimplemented the whole thing.
 + Changed to work within Script UI Panels.

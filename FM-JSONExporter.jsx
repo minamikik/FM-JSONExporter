@@ -18,19 +18,19 @@
 		4. Push Export button.
 
 	## Change log
+	### 1.0.8
+		+ Correction of minor errors.
 	### 1.0.7
 		+ Decoded non-Latin characters. 
 		+ Changed the way the Window is displayed in the center.
-
 	### 1.0.6
 		+ Unnecessary processing has been removed.
 		+ Added a description of the license.
-
 	### 1.0.5
 		+ Reimplemented the whole thing.
 		+ Changed to work within Script UI Panels.
 
-	## License
+		## License
 		MIT © sync.dev / minamikik / https://www.sync.dev
 
 */
@@ -38,7 +38,7 @@
 function fmJsonExporter(thisObj) {
 
 	var scriptName = "FM JSONExporter"
-	var scriptVersion = "1.0.7"
+	var scriptVersion = "1.0.8"
 	
 	// Show the Panel
 	var w = buildUI(thisObj)
@@ -76,7 +76,7 @@ function fmJsonExporter(thisObj) {
 		var theComp = app.project.activeItem
 		if (theComp instanceof CompItem) {
 			win.message.text = "Export " + theComp.name
-			var json = getJson(theComp, win)
+			var json = getJson(theComp)
 			if (json) {
 				saveFile(json)
 				win.message.text = "Exported " + theComp.name
@@ -103,7 +103,7 @@ function fmJsonExporter(thisObj) {
 		if (app.project.file) {
 			var projectFileName = File.decode(app.project.file.name)
 		} else {
-			var projectFileName = "The file has not been saved yet."
+			var projectFileName = "The project file has not been saved yet."
 		}
 		var json = {
 			"date": today.toLocaleString(),
@@ -163,7 +163,5 @@ function fmJsonExporter(thisObj) {
 	}
 	
 }
-
-
 
 fmJsonExporter(this)
